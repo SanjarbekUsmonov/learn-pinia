@@ -4,16 +4,33 @@
       {{count}}
     </div>
     <div class="buttons">
-      <button>-</button>
-      <button>+</button>
+      <button @click="dekrement">-</button>
+      <button @click="incerement">+</button>
+    </div>
+    <hr>
+    <div>
+      This counteris: {{addOrEven}}
     </div>
   </div>
 </template>
 
 <script setup>
- import {ref} from 'vue'
-
+ import {computed, ref} from 'vue'
  const count = ref(0)
+
+ const incerement = function (){
+   count.value++
+ }
+ const dekrement = ()=>{
+  count.value--
+ }
+ const addOrEven = computed(function(){
+  if(count.value % 2 === 0)
+  return "juft"
+  return "qoldiqli"
+ })
+
+
 </script>
 
 <style  scoped>
