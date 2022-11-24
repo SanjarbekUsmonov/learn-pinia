@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="count">
-      0
+      {{count}}
     </div>
     <div class="buttons">
       <button>-</button>
@@ -10,10 +10,10 @@
   </div>
 </template>
 
-<script>
-  export default {
-    
-  }
+<script setup>
+ import {ref} from 'vue'
+
+ const count = ref(0)
 </script>
 
 <style  scoped>
