@@ -9,7 +9,7 @@
     </div>
     <hr>
     <div>
-      This counteris: {{addOrEven}}
+      This counteris: {{a.addOrEven}}
     </div>
   </div>
 </template>

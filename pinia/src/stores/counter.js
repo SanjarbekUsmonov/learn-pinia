@@ -12,6 +12,13 @@ export const useCounterStore = defineStore( {
     },
     decrement(){
       this.count--
+    },
+  },
+  getters:{
+    addOrEven: function(state){
+      if(state.count % 2 === 0)
+        return 'juft'
+        return 'toq'
     }
   }
 })
