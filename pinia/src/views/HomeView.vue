@@ -1,11 +1,11 @@
 <template>
   <div class="home">
     <div class="count">
-      {{count}}
+      {{a.count}}
     </div>
     <div class="buttons">
-      <button @click="dekrement">-</button>
-      <button @click="incerement">+</button>
+      <button @click="a.decrement">-</button>
+      <button @click="a.increment">+</button>
     </div>
     <hr>
     <div>
@@ -16,6 +16,9 @@
 
 <script setup>
  import {computed, ref} from 'vue'
+ import {useCounterStore} from '../stores/counter'
+
+ const a = useCounterStore()
  const count = ref(0)
 
  const incerement = function (){
